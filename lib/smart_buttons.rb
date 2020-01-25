@@ -1,13 +1,10 @@
 # frozen_string_literal: true
 
 require 'smart_buttons/version'
+require 'smart_buttons/patch_button'
+require 'smart_buttons/delete_button'
 
 module SmartButtons
-  def delete_button(url, form_options: {}, button_options: {})
-    form_tag url, method: :delete, **form_options do
-      button_tag(**button_options) do
-        yield if block_given?
-      end
-    end
-  end
+  include DeleteButton
+  include PatchButton
 end

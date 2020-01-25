@@ -1,4 +1,3 @@
-
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "smart_buttons/version"
@@ -26,4 +25,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'pry'
   spec.add_development_dependency 'actionview'
   spec.add_development_dependency 'rubocop'
+
+  spec.add_dependency 'simple_form'
 end
