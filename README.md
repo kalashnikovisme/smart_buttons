@@ -21,13 +21,24 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+**Don't forget include SmartButtons to your ApplicationHelper**
 
-## Development
+*app/helpers/application_helper.rb*
+```ruby
+module ApplicationHelper
+  include SmartButtons
+end
+```
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+### HTTP/DELETE
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+If you need button with HTTP/DELETE method, just use
+
+```
+delete_button url, form_options: { class: :some_form_class }, button_options: { class: :some_button_class } do
+  here_content_which_will_be_inside_of_button
+end
+```
 
 ## Contributing
 
