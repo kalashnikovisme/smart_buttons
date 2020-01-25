@@ -6,7 +6,7 @@ module SmartButtons::PatchButton
       options[:attributes].each do |attr|
         concat build_input attr, options, f
       end
-      concat(button_tag(type: :submit, **button_options) do
+      concat(button_tag(type: :submit, **options[:button_options]) do
         yield if block_given?
       end)
     end
@@ -28,7 +28,7 @@ module SmartButtons::PatchButton
       input_html: {
         value: attr[1],
         id: "#{options[:model_name]}_#{attr[0]}",
-        name: "#{model_name}[#{attr[0]}]"
+        name: "#{options[:model_name]}[#{attr[0]}]"
       },
       as: :hidden
     )
