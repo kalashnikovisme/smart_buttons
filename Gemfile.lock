@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    smart_buttons (0.1.0)
+    smart_buttons (1.0)
       simple_form
 
 GEM
@@ -89,7 +89,7 @@ GEM
     thread_safe (0.3.6)
     tzinfo (1.2.6)
       thread_safe (~> 0.1)
-    unicode-display_width (1.6.0)
+    unicode-display_width (1.6.1)
     zeitwerk (2.2.2)
 
 PLATFORMS
