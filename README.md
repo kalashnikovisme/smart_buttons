@@ -1,7 +1,6 @@
-# SmartButtons
+# SmartButtons [![Build Status](https://github.com/kalashnikovisme/smart_buttons/workflows/Ruby/badge.svg)](https://github.com/kalashnikovisme/smart_buttons/actions)
 
 Replacement of magical `link_to` method with static HTML
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
