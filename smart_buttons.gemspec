@@ -26,4 +26,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'pry'
   spec.add_development_dependency 'actionview'
   spec.add_development_dependency 'rubocop'
+
+  spec.add_dependency 'simple_form'
 end

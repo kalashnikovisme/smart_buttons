@@ -9,7 +9,7 @@ RSpec.describe SmartButtons do
         <button name="button" type="submit"></button>
       </form>
     HTML
-    expect(delete_button('/delete_this_object')).to eq html.to_s.gsub(/\n\s\s*/, '').gsub(/^\s\s*/, '').gsub("\n", '')
+    expect(delete_button(url: '/delete_this_object')).to eq html.to_s.gsub(/\n\s\s*/, '').gsub(/^\s\s*/, '').gsub("\n", '')
   end
 
   it 'returns delete button HTML with HTML inside' do
@@ -20,7 +20,7 @@ RSpec.describe SmartButtons do
         <button name="button" type="submit">one_more_tag</button>
       </form>
     HTML
-    expect(delete_button('/delete_this_object') { 'one_more_tag' }).to(
+    expect(delete_button(url: '/delete_this_object') { 'one_more_tag' }).to(
       eq(html.to_s.gsub(/\n\s\s*/, '').gsub(/^\s\s*/, '').gsub("\n", ''))
     )
   end
@@ -33,7 +33,7 @@ RSpec.describe SmartButtons do
         <button name="button" type="submit"></button>
       </form>
     HTML
-    expect(delete_button('/delete_this_object', form_options: { class: :some_class })).to(
+    expect(delete_button(url: '/delete_this_object', form_options: { class: :some_class })).to(
       eq(html.to_s.gsub(/\n\s\s*/, '').gsub(/^\s\s*/, '').gsub("\n", ''))
     )
   end
@@ -46,7 +46,7 @@ RSpec.describe SmartButtons do
         <button name="button" type="submit" class="some_class"></button>
       </form>
     HTML
-    expect(delete_button('/delete_this_object', button_options: { class: :some_class })).to(
+    expect(delete_button(url: '/delete_this_object', button_options: { class: :some_class })).to(
       eq(html.to_s.gsub(/\n\s\s*/, '').gsub(/^\s\s*/, '').gsub("\n", ''))
     )
   end
