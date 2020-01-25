@@ -33,8 +33,27 @@ end
 
 If you need button with HTTP/DELETE method, just use
 
-```
+```ruby
 delete_button url, form_options: { class: :some_form_class }, button_options: { class: :some_button_class } do
+  here_content_which_will_be_inside_of_button
+end
+```
+
+### HTTP / PATCH
+
+If you need to make changes with ActiveRecord model, just use
+
+```ruby
+patch_button(
+  record: some_record_you_gonna_change,
+  controller: ControllerWhichWilChangeYourModel,
+  action: :action_in_this_controller,
+  parameters: { url: parameters },
+  attributes: { attribute1: value, attribute2: value },
+  model_name: record.model_name,
+  button_options: { class: :some_button_class },
+  form_options: { class: :some_form_class }
+) do
   here_content_which_will_be_inside_of_button
 end
 ```
