@@ -30,7 +30,7 @@ module ApplicationHelper
 end
 ```
 
-### HTTP/DELETE
+### HTTP / DELETE
 
 If you need button with HTTP/DELETE method, just use
 
