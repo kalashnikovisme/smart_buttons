@@ -10,7 +10,8 @@ RSpec.describe SmartButtons do
       </form>
     HTML
     expect(delete_button(url: '/delete_this_object')).to(
-      eq(html.to_s.gsub(/\n\s\s*/, '').gsub(/^\s\s*/, '').gsub("\n", '')))
+      eq(html.to_s.gsub(/\n\s\s*/, '').gsub(/^\s\s*/, '').gsub("\n", ''))
+    )
   end
 
   it 'returns delete button HTML with HTML inside' do
