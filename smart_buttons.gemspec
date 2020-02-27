@@ -27,4 +27,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rubocop'
 
   spec.add_dependency 'simple_form'
+  spec.add_dependency 'nokogiri', '>= 1.10.8'
 end
