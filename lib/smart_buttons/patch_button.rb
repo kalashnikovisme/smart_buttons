@@ -2,7 +2,7 @@
 
 module SmartButtons::PatchButton
   def patch_button(**options)
-    simple_form_for options[:record], url: build_url(options), method: :patch, html: options[:form_options] do |f|
+    simple_form_for options[:record], url: options[:url], method: :patch, html: options[:form_options] do |f|
       options[:attributes].each do |attr|
         concat build_input attr, options, f
       end
